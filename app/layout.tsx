@@ -1,22 +1,13 @@
 import type { Metadata } from 'next'
-import { Rajdhani, IBM_Plex_Mono } from 'next/font/google'
+import '@fontsource/rajdhani/400.css'
+import '@fontsource/rajdhani/600.css'
+import '@fontsource/rajdhani/700.css'
+import '@fontsource/ibm-plex-mono/400.css'
+import '@fontsource/ibm-plex-mono/500.css'
+import '@fontsource/ibm-plex-mono/700.css'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
-const rajdhani = Rajdhani({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-rajdhani',
-  display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: {
@@ -51,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en">
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>

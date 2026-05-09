@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        rajdhani: ['var(--font-rajdhani)', 'sans-serif'],
-        mono: ['var(--font-mono)', 'monospace'],
+        rajdhani: ['"Rajdhani"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
         bg:      '#080c14',

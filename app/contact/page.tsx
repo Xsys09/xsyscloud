@@ -12,9 +12,7 @@ export default function ContactPage() {
     const data = new FormData(form)
 
     try {
-      // ⚠️  Replace YOUR_FORM_ID with your actual Formspree form ID
-      // Create one free at https://formspree.io
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const res = await fetch('https://formspree.io/f/mgodnllr', {
         method:  'POST',
         body:    data,
         headers: { Accept: 'application/json' },
