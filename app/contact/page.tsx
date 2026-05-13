@@ -114,4 +114,7 @@ export default function ContactPage() {
       </div>
     </div>
   )
+    "overrides": {
+    "postcss": "^8.5.10"
+  }
 }

@@ -3,30 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --bg:      #080c14;
+  --bg: #080c14;
   --surface: #0d1420;
-  --card:    #111927;
-  --border:  #1a2640;
-  --text:    #e2e8f0;
-  --muted:   #64748b;
-  --dim:     #94a3b8;
-  --cyan:    #00c8ff;
-  --indigo:  #818cf8;
+  --card: #111927;
+  --border: #1a2640;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --dim: #94a3b8;
+  --cyan: #22d3ee;
+  --indigo: #818cf8;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 /* ── Scrollbar ── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
 
 /* ── Selection ── */
 ::selection {
@@ -36,35 +47,58 @@ body {
 
 /* ── Animations ── */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scanline {
-  0%   { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
-.cursor-blink { animation: blink 1s step-end infinite; }
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
 
-.fade-in-up { animation: fadeInUp 0.6s ease forwards; }
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
 
 /* ── Grid background ── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(26,38,64,0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26,38,64,0.45) 1px, transparent 1px);
+    linear-gradient(rgba(26, 38, 64, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 38, 64, 0.45) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 /* ── Glow helpers ── */
-.glow-cyan   { text-shadow: 0 0 24px rgba(0,200,255,0.35); }
-.glow-indigo { text-shadow: 0 0 24px rgba(129,140,248,0.35); }
+.glow-cyan {
+  text-shadow: 0 0 24px rgba(0, 200, 255, 0.35);
+}
+.glow-indigo {
+  text-shadow: 0 0 24px rgba(129, 140, 248, 0.35);
+}
 
 /* ── MDX / Blog prose ── */
 .prose-xsys {
@@ -76,20 +110,42 @@ body {
 .prose-xsys h4 {
   @apply font-rajdhani font-bold tracking-widest uppercase text-txt mt-10 mb-4 leading-tight;
 }
-.prose-xsys h1 { @apply text-4xl; }
-.prose-xsys h2 { @apply text-2xl border-b border-border pb-2; }
-.prose-xsys h3 { @apply text-xl; }
-.prose-xsys p  { @apply mb-5; }
-.prose-xsys a  { @apply text-cyan hover:underline underline-offset-4; }
-.prose-xsys strong { @apply text-txt font-bold; }
-.prose-xsys em     { @apply italic; }
-.prose-xsys ul { @apply list-disc pl-6 mb-5 space-y-1; }
-.prose-xsys ol { @apply list-decimal pl-6 mb-5 space-y-1; }
-.prose-xsys li { @apply text-dim; }
+.prose-xsys h1 {
+  @apply text-4xl;
+}
+.prose-xsys h2 {
+  @apply text-2xl border-b border-border pb-2;
+}
+.prose-xsys h3 {
+  @apply text-xl;
+}
+.prose-xsys p {
+  @apply mb-5;
+}
+.prose-xsys a {
+  @apply text-cyan hover:underline underline-offset-4;
+}
+.prose-xsys strong {
+  @apply text-txt font-bold;
+}
+.prose-xsys em {
+  @apply italic;
+}
+.prose-xsys ul {
+  @apply list-disc pl-6 mb-5 space-y-1;
+}
+.prose-xsys ol {
+  @apply list-decimal pl-6 mb-5 space-y-1;
+}
+.prose-xsys li {
+  @apply text-dim;
+}
 .prose-xsys blockquote {
   @apply border-l-2 border-cyan pl-5 italic text-muted my-6 bg-surface py-3 pr-4;
 }
-.prose-xsys hr { @apply border-border my-10; }
+.prose-xsys hr {
+  @apply border-border my-10;
+}
 .prose-xsys code {
   @apply font-mono text-cyan bg-cyan/5 px-1.5 py-0.5 text-[0.8em] border border-cyan/10;
 }

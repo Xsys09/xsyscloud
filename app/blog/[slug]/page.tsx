@@ -1,34 +1,33 @@
-import { getPostBySlug, getAllPosts } from '@/lib/posts'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import type { Metadata } from 'next'
+import { getPostBySlug, getAllPosts } from "@/lib/posts";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import type { Metadata } from "next";
 
 interface Props {
-  params: { slug: string }
+  params: { slug: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug)
-  if (!post) return {}
+  const post = getPostBySlug(params.slug);
+  if (!post) return {};
   return {
-    title:       post.title,
+    title: post.title,
     description: post.excerpt,
-  }
+  };
 }
 
 export async function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }))
+  return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
 export default function BlogPost({ params }: Props) {
-  const post = getPostBySlug(params.slug)
-  if (!post) notFound()
+  const post = getPostBySlug(params.slug);
+  if (!post) notFound();
 
   return (
     <div className="min-h-screen pt-32 pb-28">
       <div className="max-w-3xl mx-auto px-6">
-
         {/* Back link */}
         <Link
           href="/blog"
@@ -50,7 +49,9 @@ export default function BlogPost({ params }: Props) {
           </h1>
 
           {post.excerpt && (
-            <p className="text-[11px] text-muted leading-relaxed">{post.excerpt}</p>
+            <p className="text-[11px] text-muted leading-relaxed">
+              {post.excerpt}
+            </p>
           )}
 
           {post.tags.length > 0 && (
@@ -84,8 +85,7 @@ export default function BlogPost({ params }: Props) {
             ← All Posts
           </Link>
         </div>
-
       </div>
     </div>
-  )
+  );
 }

@@ -1,42 +1,42 @@
 const stats = [
-  { num: '5+',  label: 'Years in IT',       color: 'text-cyan' },
-  { num: 'M365',label: 'Admin Level',        color: 'text-indigo' },
-  { num: '2',   label: 'OS Environments',    color: 'text-cyan' },
-  { num: '∞',   label: 'Scripts Written',    color: 'text-indigo' },
-]
+  { num: "5+", label: "Years in IT", color: "text-cyan" },
+  { num: "M365", label: "Certified Admin", color: "text-indigo" },
+  { num: "24hr", label: "Response Time", color: "text-cyan" },
+  { num: "∞", label: "Tasks Automated", color: "text-indigo" },
+];
 
 export default function About() {
   return (
     <section id="about" className="py-28 max-w-6xl mx-auto px-6">
-      <div className="text-[9px] tracking-[3px] text-cyan uppercase mb-2">// 01 — About</div>
+      <div className="text-[9px] tracking-[3px] text-cyan uppercase mb-2">
+        // 02 — About
+      </div>
       <h2 className="font-rajdhani text-3xl font-bold tracking-[3px] uppercase text-txt mb-12">
-        Who I Am
+        Who We Are
       </h2>
 
       <div className="grid md:grid-cols-2 gap-14 items-start">
-
-        {/* Bio */}
+        {/* Mission */}
         <div className="text-[11px] text-dim leading-loose space-y-4">
           <p>
-            IT Systems Engineer and Service Desk Team Leader based in Iloilo,
-            Philippines. I manage infrastructure, mentor teams, and build
-            automation tools that make IT operations run smoother.
+            Xsys Cloud is an IT services and app development organization based
+            in Iloilo, Philippines. We help small and medium businesses run
+            smoother, more secure, and more modern operations — without the
+            enterprise price tag.
           </p>
           <p>
-            Day-to-day: Windows and Linux server administration, Microsoft 365
-            and Azure AD management, and writing PowerShell scripts that turn
-            repetitive tasks into one-liners. I lead a service desk team and
-            handle everything from desktop troubleshooting to cloud
-            infrastructure.
+            We handle the full IT stack: service desk support, Microsoft 365 and
+            Azure administration, server and network management, and custom
+            automation scripting. When your team needs new tools, we build them
+            — web apps, internal dashboards, and integrations tailored to your
+            workflow.
           </p>
           <p>
-            Outside the day job, I&apos;m levelling up in cloud architecture,
-            DevOps pipelines, and web development — because knowing how to
-            <em> build</em> systems is just as important as keeping them alive.
+            Our approach is straightforward: understand your business first,
+            then apply the right technology. No unnecessary complexity, no
+            vendor lock-in — just reliable IT that works.
           </p>
-          <p className="text-cyan">
-            Currently writing about what I learn along the way.
-          </p>
+          <p className="text-cyan">Local expertise. Cloud-ready solutions.</p>
         </div>
 
         {/* Stat cards */}
@@ -46,13 +46,16 @@ export default function About() {
               key={label}
               className="bg-surface border border-border p-5 hover:border-cyan/30 transition-colors"
             >
-              <div className={`font-rajdhani text-4xl font-bold ${color}`}>{num}</div>
-              <div className="text-[9px] tracking-[2px] uppercase text-muted mt-1">{label}</div>
+              <div className={`font-rajdhani text-4xl font-bold ${color}`}>
+                {num}
+              </div>
+              <div className="text-[9px] tracking-[2px] uppercase text-muted mt-1">
+                {label}
+              </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
-  )
+  );
 }

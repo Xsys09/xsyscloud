@@ -1,42 +1,40 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const navLinks = [
-  { href: '/#about',    label: 'About' },
-  { href: '/#skills',   label: 'Skills' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/blog',      label: 'Blog' },
-  { href: '/#contact',  label: 'Contact' },
-]
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen]     = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname                = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg/95 backdrop-blur-sm border-b border-border'
-          : 'bg-transparent'
+          ? "bg-bg/95 backdrop-blur-sm border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-
         {/* Logo */}
-        <Link href="/" className="font-rajdhani text-lg font-bold tracking-widest">
-          <span className="text-cyan">[X]</span>sys
-          <span className="text-dim"> · Aladdin</span>
+        <Link
+          href="/"
+          className="font-rajdhani text-lg font-bold tracking-widest"
+        >
+          <span className="text-cyan">[X]</span>SYS
+          <span className="text-dim"> CLOUD</span>
         </Link>
 
         {/* Desktop links */}
@@ -53,15 +51,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Resume CTA */}
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* CTA */}
+        <Link
+          href="/#contact"
           className="hidden md:block border border-cyan text-cyan text-[9px] tracking-[2px] uppercase px-4 py-2 hover:bg-cyan hover:text-bg transition-all duration-200 font-bold"
         >
-          Resume ↗
-        </a>
+          Get a Quote →
+        </Link>
 
         {/* Hamburger */}
         <button
@@ -70,9 +66,15 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <div className="w-5 flex flex-col gap-[5px]">
-            <span className={`block h-px bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-[6px]' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${isOpen ? 'opacity-0 scale-x-0' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-[6px]' : ''}`} />
+            <span
+              className={`block h-px bg-current transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[6px]" : ""}`}
+            />
+            <span
+              className={`block h-px bg-current transition-all duration-300 ${isOpen ? "opacity-0 scale-x-0" : ""}`}
+            />
+            <span
+              className={`block h-px bg-current transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-[6px]" : ""}`}
+            />
           </div>
         </button>
       </div>
@@ -80,7 +82,7 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 border-t border-border' : 'max-h-0'
+          isOpen ? "max-h-96 border-t border-border" : "max-h-0"
         } bg-surface`}
       >
         <ul className="flex flex-col px-6 py-4 gap-5">
@@ -97,16 +99,15 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="px-6 pb-5">
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/#contact"
             className="inline-block border border-cyan text-cyan text-[9px] tracking-[2px] uppercase px-4 py-2 font-bold"
+            onClick={() => setIsOpen(false)}
           >
-            Resume ↗
-          </a>
+            Get a Quote →
+          </Link>
         </div>
       </div>
     </nav>
-  )
+  );
 }

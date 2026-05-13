@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,40 +12,41 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto px-6 py-28 w-full">
         <div className="grid md:grid-cols-2 gap-14 items-center">
-
           {/* ── Left: Copy ── */}
           <div className="fade-in-up">
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 text-[9px] tracking-[2px] text-cyan border border-cyan/25 px-3 py-1.5 mb-7 bg-cyan/5">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan inline-block" />
-              STATUS: ONLINE · OPEN TO CONNECT
+              STATUS: ONLINE · ACCEPTING CLIENTS
             </div>
 
             <h1 className="font-rajdhani text-6xl md:text-7xl font-bold tracking-widest uppercase text-txt leading-none">
-              Aladdin
+              Xsys Cloud
             </h1>
             <div className="font-rajdhani text-2xl font-semibold tracking-widest text-cyan mt-2 mb-5 glow-cyan">
-              // Xsys
+              // IT Services &amp; App Development
             </div>
 
             <p className="text-[10px] tracking-wide text-dim leading-loose mb-9">
-              IT Systems Engineer &amp; Service Desk Team Leader<br />
-              Cloud · Infrastructure · Automation · Security<br />
-              Based in Iloilo, Philippines 🇵🇭
+              Managed IT Support · Cloud Infrastructure · Custom App Development
+              <br />
+              Cybersecurity · Automation · M365 &amp; Azure Administration
+              <br />
+              Serving local businesses in Iloilo, Philippines 🇵🇭
             </p>
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href="#projects"
+                href="/#services"
                 className="bg-cyan text-bg text-[9px] font-bold tracking-[2px] uppercase px-6 py-3 hover:bg-cyan/90 transition-colors"
               >
-                View Projects
+                Our Services
               </Link>
               <Link
-                href="/blog"
+                href="/#contact"
                 className="text-dim border border-border text-[9px] tracking-[2px] uppercase px-6 py-3 hover:border-dim transition-colors"
               >
-                Read Blog
+                Get a Quote →
               </Link>
             </div>
           </div>
@@ -57,21 +58,39 @@ export default function Hero() {
               <span className="w-3 h-3 rounded-full bg-[#ff5f57] inline-block" />
               <span className="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block" />
               <span className="w-3 h-3 rounded-full bg-[#28c840] inline-block" />
-              <span className="ml-3 text-[10px] text-muted font-mono">xsys@cloud:~$</span>
+              <span className="ml-3 text-[10px] text-muted font-mono">
+                xsys@cloud:~$
+              </span>
             </div>
 
             {/* Body */}
             <div className="p-5 text-[11px] leading-loose font-mono">
-              <div><span className="text-cyan">$ </span>whoami</div>
-              <div className="text-muted">aladdin · IT Team Lead · Iloilo, PH</div>
+              <div>
+                <span className="text-cyan">$ </span>cat services.txt
+              </div>
+              <div className="text-muted">
+                IT Help Desk &amp; Managed Support
+              </div>
+              <div className="text-muted">Web &amp; Mobile App Development</div>
+              <div className="text-muted">
+                Cloud Infrastructure (Azure / M365)
+              </div>
+              <div className="text-muted">IT Automation &amp; Scripting</div>
+              <div className="text-muted">Cybersecurity &amp; Compliance</div>
               <br />
-              <div><span className="text-cyan">$ </span>cat stack.txt</div>
-              <div className="text-muted">Windows Server | Linux (Debian / Arch)</div>
-              <div className="text-muted">Azure AD | M365 | PowerShell | Bash</div>
-              <div className="text-muted">Next.js | React | Cloud | DevOps</div>
+              <div>
+                <span className="text-cyan">$ </span>ping clients
+              </div>
+              <div className="text-[#39d353]">
+                ✓ 200 OK — SMBs · Startups · Local Business
+              </div>
               <br />
-              <div><span className="text-cyan">$ </span>ping status</div>
-              <div className="text-[#39d353]">✓ 200 OK — open to opportunities</div>
+              <div>
+                <span className="text-cyan">$ </span>./get-quote.sh
+              </div>
+              <div className="text-[#39d353]">
+                ✓ Ready — scroll to <span className="text-cyan">#contact</span>
+              </div>
               <br />
               <div>
                 <span className="text-cyan">$ </span>
@@ -79,9 +98,8 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -6,14 +6,14 @@ Personal portfolio and blog for Aladdin // Xsys.
 
 ## Stack
 
-| Layer    | Tool             |
-|----------|------------------|
-| Framework | Next.js 14 (App Router) |
-| Styling  | Tailwind CSS     |
-| Blog     | MDX (next-mdx-remote) |
-| Fonts    | Rajdhani + IBM Plex Mono |
-| Hosting  | Vercel (free tier) |
-| Forms    | Formspree (free tier) |
+| Layer     | Tool                     |
+| --------- | ------------------------ |
+| Framework | Next.js 14 (App Router)  |
+| Styling   | Tailwind CSS             |
+| Blog      | MDX (next-mdx-remote)    |
+| Fonts     | Rajdhani + IBM Plex Mono |
+| Hosting   | Vercel (free tier)       |
+| Forms     | Formspree (free tier)    |
 
 ## Getting Started
 
@@ -45,15 +45,15 @@ The post auto-appears in the blog listing sorted by date. No database, no CMS â€
 
 ## Customising Content
 
-| What | Where |
-|------|-------|
-| Projects | `components/Projects.tsx` |
-| Skills / Stack | `components/Skills.tsx` |
-| About bio & stats | `components/About.tsx` |
-| Nav links | `components/Navbar.tsx` |
-| Contact email | `app/contact/page.tsx` |
-| Site metadata | `app/layout.tsx` |
-| Resume file | `public/resume.pdf` |
+| What              | Where                     |
+| ----------------- | ------------------------- |
+| Projects          | `components/Projects.tsx` |
+| Skills / Stack    | `components/Skills.tsx`   |
+| About bio & stats | `components/About.tsx`    |
+| Nav links         | `components/Navbar.tsx`   |
+| Contact email     | `app/contact/page.tsx`    |
+| Site metadata     | `app/layout.tsx`          |
+| Resume file       | `public/resume.pdf`       |
 
 ## Contact Form Setup
 
