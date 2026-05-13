@@ -14,6 +14,46 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-14 items-center">
           {/* ── Left: Copy ── */}
           <div className="fade-in-up">
+            {/* Google Search Bar - Top Placement */}
+            <div className="mb-10 max-w-md relative z-10">
+              <form
+                method="get"
+                action="https://www.google.com/search"
+                target="_blank"
+                className="relative group"
+              >
+                <div className="absolute -inset-0.5 bg-cyan/20 rounded opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"></div>
+                <div className="relative flex">
+                  <input
+                    type="text"
+                    name="q"
+                    placeholder="Search the web with Google..."
+                    className="w-full bg-surface border-2 border-cyan/30 text-txt text-[12px] px-5 py-3.5 focus:outline-none focus:border-cyan font-mono placeholder:text-muted transition-all"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-cyan hover:text-cyan-bright transition-colors bg-transparent border-none cursor-pointer p-1"
+                    aria-label="Search"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 text-[9px] tracking-[2px] text-cyan border border-cyan/25 px-3 py-1.5 mb-7 bg-cyan/5">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan inline-block" />
@@ -23,44 +63,8 @@ export default function Hero() {
             <h1 className="font-rajdhani text-6xl md:text-7xl font-bold tracking-widest uppercase text-txt leading-none">
               Xsys Cloud
             </h1>
-            <div className="font-rajdhani text-2xl font-semibold tracking-widest text-cyan mt-2 mb-5 glow-cyan">
+            <div className="font-rajdhani text-2xl font-semibold tracking-widest text-cyan mt-2 mb-8 glow-cyan">
               // IT Services &amp; App Development
-            </div>
-
-            {/* DuckDuckGo Search Bar */}
-            <div className="mb-9 max-w-md relative z-10">
-              <form
-                method="get"
-                action="https://duckduckgo.com/"
-                className="relative group"
-              >
-                <input
-                  type="text"
-                  name="q"
-                  placeholder="Search the web..."
-                  className="w-full bg-surface/50 border border-cyan/20 text-txt text-[11px] px-5 py-3 focus:outline-none focus:border-cyan/60 font-mono placeholder:text-muted/80 transition-all hover:border-cyan/40"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-cyan hover:text-cyan-bright transition-colors bg-transparent border-none cursor-pointer p-1"
-                  aria-label="Search"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.3-4.3" />
-                  </svg>
-                </button>
-              </form>
             </div>
 
             <p className="text-[10px] tracking-wide text-dim leading-loose mb-9">
