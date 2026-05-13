@@ -27,6 +27,42 @@ export default function Hero() {
               // IT Services &amp; App Development
             </div>
 
+            {/* DuckDuckGo Search Bar */}
+            <div className="mb-9 max-w-sm">
+              <form
+                method="get"
+                action="https://duckduckgo.com/"
+                className="relative"
+              >
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="Search Xsys Cloud..."
+                  className="w-full bg-surface border border-border text-txt text-[10px] px-4 py-2.5 focus:outline-none focus:border-cyan/50 font-mono placeholder:text-muted transition-colors"
+                />
+                <input type="hidden" name="sites" value="xsyscloud.net" />
+                <button
+                  type="submit"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-cyan hover:text-cyan/80 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+
             <p className="text-[10px] tracking-wide text-dim leading-loose mb-9">
               Managed IT Support · Cloud Infrastructure · Custom App Development
               <br />
