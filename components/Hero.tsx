@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
 
             {/* DuckDuckGo Search Bar */}
-            <div className="mb-9 max-w-sm">
+            <div className="mb-9 max-w-sm relative z-10">
               <form
                 method="get"
                 action="https://duckduckgo.com/"
@@ -37,13 +37,13 @@ export default function Hero() {
                 <input
                   type="text"
                   name="q"
-                  placeholder="Search Xsys Cloud..."
+                  placeholder="Search the web..."
                   className="w-full bg-surface border border-border text-txt text-[10px] px-4 py-2.5 focus:outline-none focus:border-cyan/50 font-mono placeholder:text-muted transition-colors"
                 />
-                <input type="hidden" name="sites" value="xsyscloud.net" />
                 <button
                   type="submit"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-cyan hover:text-cyan/80 transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-cyan hover:text-cyan/80 transition-colors bg-transparent border-none cursor-pointer"
+                  aria-label="Search"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
