@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Aladdin // Xsys — IT Engineer & Developer",
+    default: "Xsys Cloud",
     template: "%s | Xsys",
   },
   description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Aladdin", url: "https://xsyscloud.vercel.app" }],
   openGraph: {
-    title: "Aladdin // Xsys",
+    title: "Xsys Cloud",
     description: "IT Systems Engineer & Developer",
     url: "https://xsyscloud.vercel.app",
     siteName: "XsysCloud",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aladdin // Xsys",
+    title: "Xsys Cloud",
     description: "IT Systems Engineer & Developer",
   },
 };
