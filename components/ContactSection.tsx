@@ -145,7 +145,7 @@ export default function ContactSection() {
                   <span className="text-cyan">github </span> github.com/Xsys09
                 </div>
                 <div>
-                  <span className="text-cyan">location </span> Iloilo,
+                  <span className="text-cyan">location </span> Rizal,
                   Philippines 🇵🇭
                 </div>
                 <div>

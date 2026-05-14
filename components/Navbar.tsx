@@ -99,15 +99,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="px-6 pb-5">
-          <Link
-            href="/#contact"
-            className="inline-block border border-cyan text-cyan text-[9px] tracking-[2px] uppercase px-4 py-2 font-bold"
-            onClick={() => setIsOpen(false)}
-          >
-            Get a Quote →
-          </Link>
-        </div>
       </div>
     </nav>
   );
