@@ -52,14 +52,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <Link
-          href="/#contact"
-          className="hidden md:block border border-cyan text-cyan text-[9px] tracking-[2px] uppercase px-4 py-2 hover:bg-cyan hover:text-bg transition-all duration-200 font-bold"
-        >
-          Get a Quote →
-        </Link>
-
         {/* Hamburger */}
         <button
           className="md:hidden text-muted hover:text-cyan transition-colors"
