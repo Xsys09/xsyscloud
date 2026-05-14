@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Xsys",
   },
   description:
-    "IT Systems Engineer and Service Desk Team Leader based in Iloilo, Philippines. Writing about infrastructure, cloud, and automation.",
+    "IT Systems Engineer and Service Desk Team Leader based in Rizal, Philippines. Writing about infrastructure, cloud, and automation.",
   keywords: [
     "IT Engineer",
     "Systems Administrator",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Azure",
     "Cloud",
     "Philippines",
-    "Iloilo",
+    "Rizal",
   ],
   authors: [{ name: "Aladdin", url: "https://xsyscloud.vercel.app" }],
   openGraph: {

@@ -20,7 +20,7 @@ export default function About() {
         <div className="text-[11px] text-dim leading-loose space-y-4">
           <p>
             Xsys Cloud is an IT services and app development organization based
-            in Iloilo, Philippines. We help small and medium businesses run
+            in Rizal, Philippines. We help small and medium businesses run
             smoother, more secure, and more modern operations — without the
             enterprise price tag.
           </p>

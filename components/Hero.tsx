@@ -82,12 +82,12 @@ export default function Hero() {
               >
                 Our Services
               </Link>
-              <Link
-                href="/#contact"
+              <a
+                href="mailto:admin@xsyscloud.net"
                 className="text-dim border border-border text-[9px] tracking-[2px] uppercase px-6 py-3 hover:border-dim transition-colors"
               >
-                Get a Quote →
-              </Link>
+                Contact Us
+              </a>
             </div>
           </div>
 

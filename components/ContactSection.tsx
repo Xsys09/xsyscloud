@@ -37,11 +37,11 @@ export default function ContactSection() {
           // 03 — Contact
         </div>
         <h2 className="font-rajdhani text-3xl font-bold tracking-[3px] uppercase text-txt mb-3">
-          Request a Quote
+          Contact Us
         </h2>
         <p className="text-[11px] text-muted leading-relaxed mb-14 max-w-xl">
-          Tell us about your IT needs or project idea. We&apos;ll get back to
-          you within 24 hours with a tailored proposal.
+          Contact us about your IT needs or project idea. We&apos;ll get back to
+          you within 24 hours with a tailored solution.
         </p>
 
         <div className="grid md:grid-cols-2 gap-14 items-start">

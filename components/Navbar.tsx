@@ -7,7 +7,7 @@ const navLinks = [
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
-  { href: "https://status.xsyscloud.net/status/services", label: "Status" },
+  { href: "https://status.xsyscloud.net/", label: "Status" },
 ];
 
 export default function Navbar() {
